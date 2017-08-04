@@ -1,0 +1,33 @@
+<form class="search-box">
+  <md-input-container class="full-width" color="warn">
+    <input mdInput aria-label="Search" [(ngModel)]="name" name="name" (keyup)="searchPokemon()" type="search" placeholder="Try Searching 'pikachu'">
+    <md-hint align="start"><strong>All letters must be lower case</strong> </md-hint>
+  </md-input-container>
+</form>
+
+<md-card *ngIf="pokemon" class="card">
+  <md-card-header>
+    <div md-card-avatar><img src="../../assets/pokeball.png" width="40px" height="40px"></div>
+    <md-card-title>name <b>{{pokemon.name}}</b></md-card-title>
+    <md-card-subtitle>id# {{pokemon.id}}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src="{{pokemon.sprites.front_default}}" width="50%" height="50%">
+  <md-card-content>
+    <p>
+      Height: {{pokemon.height}}
+      Weight: {{pokemon.weight}}
+    </p>
+    <p></p>
+  </md-card-content>
+</md-card>
+
+
+<md-card class="card">
+  <md-card-content>
+    <p>
+      Pikapedia is a client-side JavaScript webapp by <a href="http://xavierduncan.com" target="_blank">Xavier Duncan</a>.
+      <br/><br/>
+      A work in progress, the end result is intended to be a complete, full featured Pokedex that works offline.
+    </p>
+  </md-card-content>
+</md-card>

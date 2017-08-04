@@ -1,0 +1,12 @@
+<md-toolbar color="warn">
+  <img src="../../assets/pikachu.gif" width="40px;" height="40px;">
+  &nbsp;
+  <span><a href="http://pikapedia.xavierduncan.com" style="text-decoration: none; color: white;">Pikapedia</a></span>
+  <span class="fill-remaining-space"></span>
+  <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon></button>
+</md-toolbar>
+
+<md-menu #appMenu="mdMenu">
+  <button md-menu-item> About </button>
+  <button md-menu-item> <md-icon>favorite_border</md-icon></button>
+</md-menu>
